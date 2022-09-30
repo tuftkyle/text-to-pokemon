@@ -97,6 +97,7 @@ css = """
             transform: translateY(10px);
             background: white;
         }
+        .dark .logo{ filter: invert(1); }
         .dark .footer {
             border-color: #303030;
         }
@@ -135,7 +136,7 @@ with block:
         """
             <div style="text-align: center; max-width: 650px; margin: 0 auto;">
               <div>
-                <img src="https://lambdalabs.com/static/images/lambda-logo.svg" alt="Lambda Logo"
+                <img class="logo" src="https://lambdalabs.com/static/images/lambda-logo.svg" alt="Lambda Logo"
                     style="margin: auto; max-width: 7rem;">
                 <h1 style="font-weight: 900; font-size: 3rem;">
                   Pokémon text to image
