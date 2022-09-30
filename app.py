@@ -173,7 +173,7 @@ with block:
 
         with gr.Row(elem_id="advanced-options"):
             samples = gr.Slider(label="Images", minimum=1, maximum=4, value=2, step=1)
-            steps = gr.Slider(label="Steps", minimum=1, maximum=50, value=25, step=1)
+            steps = gr.Slider(label="Steps", minimum=5, maximum=50, value=25, step=5)
             scale = gr.Slider(
                 label="Guidance Scale", minimum=0, maximum=50, value=7.5, step=0.1
             )
@@ -195,6 +195,7 @@ with block:
                     <p> Put in a text prompt and generate your own Pokémon character, no "prompt engineering" required!
                     <p>If you want to find out how we made this model read about it in <a href="https://lambdalabs.com/blog/how-to-fine-tune-stable-diffusion-how-we-made-the-text-to-pokemon-model-at-lambda/">this blog post</a>.
                     <p>And if you want to train your own Stable Diffusion variants, see our <a href="https://github.com/LambdaLabsML/examples/tree/main/stable-diffusion-finetuning">Examples Repo</a>!
+                    <p>Trained by <a href="justinpinkney.com">Justin Pinkney</a> (<a href="https://twitter.com/Buntworthy">@Buntworthy</a>) at <a href="https://lambdalabs.com/">Lambda Labs</a>.</p>
                </div>
            """
         )
