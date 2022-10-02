@@ -2,14 +2,21 @@ from contextlib import nullcontext
 import gradio as gr
 import torch
 from torch import autocast
-from diffusers import StableDiffusionPipeline
+from diffusers import StableDiffusionPipeline, StableDiffusionOnnxPipeline
 
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
 context = autocast if device == "cuda" else nullcontext
 dtype = torch.float16 if device == "cuda" else torch.float32
 
-pipe = StableDiffusionPipeline.from_pretrained("lambdalabs/sd-pokemon-diffusers", torch_dtype=dtype)
+if device == "cuda":
+    pipe = StableDiffusionPipeline.from_pretrained("lambdalabs/sd-pokemon-diffusers", torch_dtype=dtype)
+else:
+    pipe = StableDiffusionOnnxPipeline.from_pretrained(
+        "lambdalabs/sd-pokemon-diffusers",
+        revision="onnx",
+        provider="CPUExecutionProvider"
+    )
 pipe = pipe.to(device)
 
 
