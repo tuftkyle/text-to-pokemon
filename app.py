@@ -136,7 +136,7 @@ with block:
         """
             <div style="text-align: center; max-width: 650px; margin: 0 auto;">
               <div>
-                <img class="logo" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.com%2Ffree-photos-vectors%2Flogo&psig=AOvVaw191RjUdoWjGkVzAnfmLFzL&ust=1667426023577000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCOj60ZD8jfsCFQAAAAAdAAAAABAD" alt="Lambda Logo"
+                <img class="logo" src="https://lambdalabs.com/static/images/lambda-logo.svg" alt="Lambda Logo"
                     style="margin: auto; max-width: 7rem;">
                 <h1 style="font-weight: 900; font-size: 3rem;">
                   Pokémon text to image
